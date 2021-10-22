@@ -1,7 +1,7 @@
 class Card
     attr_reader :type
     def initialize(type)
-        @type = 'Ace of Sapdes'
+        @type = type
     end
 end
 
