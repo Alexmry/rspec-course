@@ -8,9 +8,12 @@ end
 
 
 RSpec.describe Card do
-    def card
-        Card.new('Ace', 'Sapdes')
-    end
+    let(:card) { Card.new('Ace', 'Sapdes') }
+
+    # def card
+    #     Card.new('Ace', 'Sapdes')
+    # end
+
     # before do
     # # before(:example) do
     #     puts 'hellooooooooooooo'
