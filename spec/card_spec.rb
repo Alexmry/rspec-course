@@ -8,16 +8,16 @@ end
 
 
 RSpec.describe Card do
-    let(:card) { Card.new('Ace', 'Sapdes') }
+    let(:card) { Card.new('Ace', 'Spades') }
 
     # def card
-    #     Card.new('Ace', 'Sapdes')
+    #     Card.new('Ace', 'Spades')
     # end
 
     # before do
     # # before(:example) do
     #     puts 'hellooooooooooooo'
-    #     @card = Card.new('Ace', 'Sapdes')
+    #     @card = Card.new('Ace', 'Spades')
     # end
 
 
@@ -28,6 +28,11 @@ RSpec.describe Card do
     end
 
     it 'has a suit' do
-        expect(card.suit).to eq('Sapdes')
+        expect(card.suit).to eq('Spades')
+    end
+
+    it 'it has a custom error message' do
+        comparison = 'Spades'
+        expect(card.suit).to eq(comparison)
     end
 end
