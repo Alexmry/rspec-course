@@ -5,7 +5,7 @@ RSpec.describe '#even? method' do
     # it 'shoudl return false if number is odd' do   
     # end
 
-    describe 'with even number' do
+    context 'with even number' do # context and descibe are identical
         it 'should return true' do
             expect(4.even?).to eq(true)
         end
