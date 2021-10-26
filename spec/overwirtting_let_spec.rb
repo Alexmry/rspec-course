@@ -4,3 +4,11 @@ class ProgrammingLanguage
         @name=name
     end
 end
+
+RSpec.describe ProgrammingLanguage do
+    let(:language) { ProgrammingLanguage.new('Python') }
+
+    it 'should store the name of the language' do
+        expect(language.name).to eq('Python')
+    end
+end
