@@ -1,10 +1,10 @@
 RSpec.describe 'Nested Hooks' do
     before(:context) do
-       puts 'before context' 
+       puts 'OUTER before context' 
     end
 
     before(:example) do
-        puts 'before example' 
+        puts 'OUTER before example' 
     end
 
     it 'does basic math' do
@@ -13,11 +13,19 @@ RSpec.describe 'Nested Hooks' do
 
     context 'with condition A' do
         before(:context) do
-            puts 'before context' 
+            puts 'INNER before context' 
         end
      
         before(:example) do
-            puts 'before example' 
+            puts 'INNER before example' 
         end 
+
+        it 'does some more basic math' do
+            expect(1+1).to eq(2)
+        end
+
+        it 'does substarction as well' do
+            expect(5-3).to eq(2)
+        end
     end
 end
