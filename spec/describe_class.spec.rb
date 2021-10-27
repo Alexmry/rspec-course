@@ -8,11 +8,12 @@ end
 
 RSpec.describe King do
     # subject { king.new('Boris') }
-    # let(:Louis) { King.new('Louis')}
+    # let(:louis) { King.new('Louis')}
     subject { described_class.new('Boris') }
-    let(:Louis) { described_class.new('Louis') }
+    let(:louis) { described_class.new('louis') }
     
     it 'represents a great person' do
         expect(subject.name).to eq('Boris')
+        expect(louis.name).to eq('louis')
     end
 end
