@@ -1,6 +1,6 @@
 RSpec.shared_context 'common' do
     before do
-        @food = []
+        @foods = []
     end
 
     def some_helper_method
@@ -11,5 +11,11 @@ RSpec.shared_context 'common' do
 end
 
 RSpec.describe 'first example group' do
-    
+    include_context 'common'
+
+    it 'can use outside instance variables' do
+        expect(@foods.length).to eq(0)
+        @foods << 'burger'
+        expect(@foods.length).to eq(1)
+    end
 end
