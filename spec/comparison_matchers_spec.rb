@@ -9,4 +9,9 @@ RSpec.describe 'comparison matchers' do
         expect(22).to be <= 100
         expect(22).to be <= 22
     end
+
+    describe 100 do
+        # subject { 100 }
+        it { is_expected.to eq(100) }
+    end
 end
