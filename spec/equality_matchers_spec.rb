@@ -10,4 +10,11 @@ RSpec.describe 'equality matchers' do
         end
     end
 
+    describe 'eql matcher' do
+        it 'testor the value, including same type' do
+            expect(a).not_to eql(3)
+            expect(b).not_to eql(3.0)
+            expect(a).not_to eql(b) 
+        end
+    end
 end
