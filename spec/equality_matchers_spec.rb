@@ -32,6 +32,9 @@ RSpec.describe 'equality matchers' do
 
             expect(c).to equal(e)
             expect(c).to be(e) #same than equal
+
+            expect(c).not_to equal(d)
+            expect(c).not_to equal([1, 2, 3])
         end
     end
 end
