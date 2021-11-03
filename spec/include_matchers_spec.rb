@@ -22,4 +22,16 @@ RSpec.describe 'include matcher' do
         it {is_expected.to include(10, 20)}
         it {is_expected.to include(30, 20)}
     end
+
+    describe ({a:2, b:4}) do
+        it 'can check for a key existence' do
+            expect(subject).to include(:a)
+            expect(subject).to include(:a, :b)
+            expect(subject).to include(:b, :a)
+        end
+
+        it 'can check for a key-value pair matcher' do
+            expect(subject).to include({a: 2})
+        end
+    end
 end
