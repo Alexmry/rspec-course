@@ -33,5 +33,7 @@ RSpec.describe 'include matcher' do
         it 'can check for a key-value pair matcher' do
             expect(subject).to include({a: 2})
         end
+
+        it { is_expected.to include({a: 2}) }
     end
 end
