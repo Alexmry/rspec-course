@@ -4,5 +4,8 @@ RSpec.describe 'start with and end with matchers' do
             expect(subject).to start_with('cat')
             expect(subject).to end_with('pillar')
         end 
+
+        it { is_expected.to start_with('cat') }
+        it { is_expected.to end_with('pillar') }
     end
 end
