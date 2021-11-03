@@ -16,4 +16,8 @@ RSpec.describe 'raise error matcher' do
 
     end
 
+    it 'can also check for a user-created error' do
+        expect {raise CustomError }.to raise_error(CustomError)
+    end
+
 end
