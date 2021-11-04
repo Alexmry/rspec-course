@@ -16,3 +16,9 @@ RSpec.describe 'caterpillar' do
 
     it { is_expected.to start_with('cat').and end_with('pillar') }
 end
+
+RSpec.describe [:usa, :canada, :mexico] do
+    it 'can check for multiple possibilities' do
+        expect(subject.sample).to eq(:usa).or eq(:canada).or eq(:mexico)
+    end
+end
