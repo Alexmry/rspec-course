@@ -43,7 +43,7 @@ end
 
 RSpec.describe Movie do
     let(:stuntman) { double("Mr Danger", ready?: true, act: "Any String", fall_off_ladder: "Sure, let's do it", light_on_fire: true) }
-    subject { describe_class.new(stuntman) }
+    subject { described_class.new(stuntman) }
 
     describe '#start_shooting method' do
         it 'expects the actor to do 3 actions' do
