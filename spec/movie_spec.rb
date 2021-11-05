@@ -7,4 +7,14 @@ class Actor
         sleep(3)
         true
     end
+
+    def act
+        "I love you baby"
+    end
+
+    def fall_off_ladder
+        "call my agent: no way!"
+    end
+
+    
 end
