@@ -11,6 +11,16 @@ RSpec.describe 'allow method review' do
 
     it 'can stub one or more method on a real object' do
         arr = [1, 2, 3]
-        expect(arr.sum).to eq(6)
+        allow(arr).to receive(:sum).and_return(10)
+
+        # expect(arr.sum).to eq(6)
+        expect(arr.sum).to eq(10)
+
+        arr.push(4)
+        expect(arr).to eq([1, 2, 3, 4])
+    end
+
+    it 'can return multiple value in sequence' do
+        
     end
 end
