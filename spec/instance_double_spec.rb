@@ -19,6 +19,7 @@ RSpec.describe Person do
 
             person = instance_double(Person)
             allow(person).to receive(:a).with(3).and_return('hello')
+            expect(person.a(3)).to eq("hello")
         end
     end
 end
