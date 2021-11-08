@@ -21,6 +21,14 @@ RSpec.describe 'allow method review' do
     end
 
     it 'can return multiple value in sequence' do
-        
+        mock_array = double
+        allow(mock_array).to receive(:pop).and_return(:c, :b, nil)
+        # [:b, :c]
+        expect(mock_array.pop).to eq(:c)
+        expect(mock_array.pop).to eq(:b)
+        expect(mock_array.pop).to be_nil
+        expect(mock_array.pop).to be_nil
+        expect(mock_array.pop).to be_nil
+        expect(mock_array.pop).to be_nil
     end
 end
