@@ -1,6 +1,6 @@
 class Person
-    def a
-        sleep(3)
+    def a(second)
+        sleep(second)
         "hello"
     end
 end
@@ -18,6 +18,7 @@ RSpec.describe Person do
             # person = instance_double(Person, a: 'hello', b: 20)
 
             person = instance_double(Person)
+            allow(person).to receive(:a).with(3).and_return('hello')
         end
     end
 end
