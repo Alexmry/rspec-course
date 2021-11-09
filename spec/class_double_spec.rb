@@ -1,8 +1,8 @@
-class Deck
-    def self.build
-        # business logic to build a whole bunch of cards
-    end
-end
+# class Deck
+#     def self.build
+#         # business logic to build a whole bunch of cards
+#     end
+# end
 
 class CardGame
     attr_reader :cards
@@ -13,6 +13,8 @@ end
 
 RSpec.describe CardGame do
     it' can only implement class method that are define on a class' do
-        class_double(Deck, build: ['Ace', 'Queen'], shuffle: ['Queen', 'Ace'])
+        # class_double(Deck, build: ['Ace', 'Queen'], shuffle: ['Queen', 'Ace'])
+        # class_double(Deck, build: ['Ace', 'Queen'])
+        class_double('Deck', build: ['Ace', 'Queen'])
     end
 end
