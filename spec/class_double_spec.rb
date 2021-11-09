@@ -10,3 +10,9 @@ class CardGame
         @cards = Deck.build
     end
 end
+
+RSpec.describe CardGame do
+    it' can only implement class method that are define on a class' do
+        class_double(Deck, build: ['Ace', 'Queen'], shuffle: ['Queen', 'Ace'])
+    end
+end
