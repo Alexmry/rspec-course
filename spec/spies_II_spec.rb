@@ -26,6 +26,9 @@ RSpec.describe Garage do
 
     it 'add a car to its storage' do
         subject.add_to_collection('Porsche')
+        expect(Car).to have_received(:new)
+        # expect(subject.storage.length).to eq(1)
+        expect(subject.storage.first).to eq(car)
     end
 
 end
