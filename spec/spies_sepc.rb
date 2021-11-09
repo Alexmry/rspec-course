@@ -6,4 +6,8 @@ RSpec.describe 'animal' do
         expect(animal).to have_received(:eat_food)
         expect(animal).not_to have_received(:eat_human)
     end
+
+    it 'reset between example' do
+        expect(animal).not_to have_received(:eat_food)
+    end
 end
